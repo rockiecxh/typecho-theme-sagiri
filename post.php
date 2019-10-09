@@ -16,6 +16,10 @@
                         <span><?php _e('<i class="iconfont icon-time"></i> 发表于 '); ?><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time></span>
                         <span><?php _e('<i class="iconfont icon-eye"></i> 浏览量 '); getPostView($this); ?></span>
                         <span itemprop="interactionCount"><a itemprop="discussionUrl" href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('<i class="iconfont icon-Comments"></i> 没有评论', '<i class="iconfont icon-Comments"></i> 评论数 1', '<i class="iconfont icon-Comments"></i> 评论数 %d'); ?></a></span>
+                        <span><?php if($this -> authorId == $this -> user -> uid): ?>
+                            <a class="edit-link" href="<?php $this -> options -> adminUrl(); ?>write-post.php?cid=<?php echo $this -> cid; ?>" target="_blank">编辑</a>
+                            <?php endif; ?>
+                        </span>
                     </div>
                 </header>
                 <div class="post-content" itemprop="articleBody">

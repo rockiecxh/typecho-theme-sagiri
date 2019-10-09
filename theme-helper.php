@@ -76,7 +76,8 @@ function showThumb($obj)
 
     if (empty($thumb)) {
         if (!empty($options->default_thumb)) {
-            $thumb = '<img src="' . $options->default_thumb . '" />';
+            $thumb_url = $options->default_thumb . '&t=' . rand();
+            $thumb = '<img src="' . $thumb_url . '" />';
         }
     }
     return $thumb;
