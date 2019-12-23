@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('component/header.php'); ?>
 
 <div id="main" class="main" role="main">
     <section class="home-404">
@@ -56,4 +56,4 @@
     }
 </style>
 
-<?php $this->need('footer.php'); ?>
+<?php $this->need('component/footer.php'); ?>

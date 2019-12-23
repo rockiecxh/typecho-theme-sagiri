@@ -1,3 +1,55 @@
+[F] Fix Bug.
+[S] Style Change.
+[A] Add Feature.
+[U] Update Config.
+[Doc] Update DOC.
+
+## 2019/11/23
+
+[F] #27
+
+- php5 not support <?
+
+## 2019/11/7
+
+[A]: add instantclick
+[DOC]: CN README
+
+## 2019/11/4
+
+[S] video style at mobile.
+[F] Change the distance of scroll2post(-50px).
+
+## 2019/11/4
+
+[A] Add video Short Code Support.
+
+## 2019/11/3
+
+[A] You need add the truncation `<!-- more -->` control output (Home Article & ...).
+
+## 2019/11/3 (V1.1.4)
+
+- [S] replace Site Title animation.
+  移除 Title 动画。
+- [S] Banner height -> 550px -> 350px (PC)
+- [F] fix topView post order.
+
+## 2019/11/2
+
+- [F] Fix when the article title is too much, the Toc display error(layout).
+  修复文章标题过多时，目录显示错位
+- [A] add jp & zh_tw lang.
+- [F] Replace DB insert with typecho custom field.
+  使用自定义字段替换数据库操作（不会破坏原有数据库结构）
+- [F] fix site title position (mobile)
+
+<!--  -->
+
+## 2018/10/13 v1.1
+
+- [U]: 重构 JS
+
 ## 2018/5/2 v1.0.3
 
 - [remove]: remove auto load article & unused code & DNS Prefetch .

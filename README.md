@@ -1,110 +1,176 @@
 <h1 align="center">Sagiri</h1>
+<h3 align="center">As lovely as sagiri</h3>
 
-> As lovely as sagiri
+<p align="center">
+  <a href="">Preview</a> |
+  <a href="https://shiyiya.github.io/typecho-theme-sagiri">Documentation</a> |
+  <a href="https://github.com/shiyiya/typecho-theme-sagiri/releases">Download</a> |
+  <a href="./doc/README-CN.md">(CN DOC) 中文文档</a>
+  <br />
+  <br />
+  <a href="https://github.com/shiyiya/typecho-theme-sagiri/tree/pjax">PJAX Version</a> |
+  <a href="./doc/changelog.md">Change Log</a> |
+  <a href="#donate">Donate 捐赠支持</a>
+  <br />
+  <br />
+  <b>As lovely as sagiri, based on <a href="https://github.com/DIYgod/hexo-theme-sagiri">hexo-theme-sagiri</a></b>
 
-[![](https://img.shields.io/badge/license-GPL%203-blue.svg?style=flat-square)](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/LICENSE)
+</p>
 
-[![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat-square)](https://github.com/shiyiya/typecho-theme-sagiri#donate)
+[![stars](https://flat.badgen.net/github/stars/shiyiya/typecho-theme-sagiri?icon=github)](https://github.com/shiyiya/typecho-theme-sagiri)
+[![npm](https://flat.badgen.net/npm/v/typecho-theme-sagiri/?color=fb3e44)](https://www.npmjs.com/package/typecho-theme-sagiri)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/typecho-theme-sagiri/badge)](https://www.jsdelivr.com/package/npm/typecho-theme-sagiri)
+[![license](https://img.shields.io/badge/license-GPL%203-blue.svg?style=flat-square)](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/LICENSE) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat-square)](https://github.com/shiyiya/typecho-theme-sagiri#donate)
 
-## 介绍
+## Demo
 
-[The English Version](./doc/README-EN.md)
+![shot](https://cdn.jsdelivr.net/npm/typecho-theme-sagiri@1.1.4/screenshot.png)
 
-Sagiri ，简洁可爱的 `typecho` 主题。
-主题样式基于 [hexo-theme-sagiri](https://github.com/DIYgod/hexo-theme-sagiri) 上修改与添加。
+There must be no plagiarism or excessive reprinting; at least not a few months can not be accessed & change the theme, and that's it!
+If you think you meet the above conditions, please submit the relevant `PR` ([How to PR](#Contribute))
 
-如果有相关问题 / 想知道更多？
-Tencent Group: [861379856](https://jq.qq.com/?_wv=1027&k=5kACJ6v)
-
-- [change log](./doc/changelog.md)
-
-- 轻量级，无 JQery，仅使用 Prism 作为代码高亮
-- 支持代码高亮，5 主题，支持主流代码，使用 Prism
-- 响应式，适用于移动端与桌面端，桌面端 > 移动端
-- 支持首页文章缩略图、随机图
-- 支持文章目录树、相关文章
-- 独立页面支持归档、分类、友链
-- 图片懒加载支持
-- 国际化支持（i18N）
-
-## 预览
-
-[![overview](./doc/shot.png)](http://runtua.cn)
-
-## 演示站点
-
-内容健康，不得有抄袭或者过多转载；长期稳定，至少不会几个月就无法访问；换皮，这就不用说了。
-如果你认为你满足以上条件，请提交相关 `PR`（[如何 PR](#贡献))
-
-- https://www.wuqing.info
 - https://blog.imlazy.ink:233
 - https://mianao.info
 - ···
 
-## 主题使用
+## Installation
 
-点击“Download ZIP”下载，解压后将文件夹改名（不改名 typecho 会报文件夹名过长的错误（500）为 Sagiri 后上传到 /usr/themes，并启用主题
+1. Download from [releases](https://github.com/shiyiya/typecho-theme-sagiri/releases) to your blog's theme folder.
+2. Enable it in the background management, if an error occurs, rename the folder to sagiri
 
-如果需要更新主题，则先下载最新文件，然后覆盖原文件即可完成更新，部分新增加的功能需要到后台开启才会生效
+- If you need to update the theme, download the latest version, then overwrite the original file to complete the update, some new features need to be enabled in the background to take effect.
 
-## 相关设置
+```shell
+git clone https://github.com/shiyiya/typecho-theme-sagiri.git
+```
 
-- 缩略图
+## Features
 
-  - 文章缩略图为附件第一张图片 -> 文章内第一张图片。
-  - 缩略图支持 Markdown 格式, HTML 格式以及附件形式, Markdown 格式为 `![图片描述](图片链接)` 。
-  - 如果想要自定义某篇文章的缩略图, 但是不想让该图片在文章中出现, 则可上传附件而不使用。
+### Instantclick
 
-- 首页文章概览默认最大输出 100 个字符, 可手动添加截断符 `<!-- more -->` 控制输出。
+### Rich Code Highlight Theme Choices
 
-- 如何创建归档 & 搜索 & 分类
-  - 归档 :
-    新建独立页面 -> 选择模板 -> page-archive -> 设置 url 为 archive -> 高级选项 -> 隐藏
-  - 搜索 :
-    新建独立页面 -> 选择模板 -> page-search -> 设置 url 为 search -> 高级选项 -> 隐藏
-  - 分类 :
-    新建独立页面 -> 选择模板 -> page-categories-> 设置 url 为 categorie -> 高级选项 -> 隐藏
-  - 示例：
-    ![how-to-create-archive-page](http://runtua.cn/usr/uploads/2018/10/3336908615.png)
+Using Prism.js as code highlighting. sagiri default comes with 5 themes & supported 32 language, if you need more, just go [here](https://prismjs.com/) to download.
 
-### 头部个性化标徽
+- Supported language: markup+css+clike+javascript+c+csharp+cpp+ruby+docker+markup-templating+flow+git+go+haskell+java+json+kotlin+markdown+lisp+lua+php+sql+powershell+python+typescript+rust+scala+scheme+pug+swift+yaml+vi
 
-独立页面文字需为：
+<table>
+  <tr>
+    <td><img src="https://i.loli.net/2019/10/18/4qOlZUzcpF6Lo7P.png"></td>
+    <td><img src="https://i.loli.net/2019/10/18/keoYfqXAdcyTS3I.png"></td>
+    <td><img src="https://i.loli.net/2019/10/18/GDqMJtTC9EYykAm.png"></td>
+  </tr>
+</table>
+
+### Special Page
+
+- Create Page.
+
+  <tr>
+     <td><img src="https://i.loli.net/2019/10/18/kC5uPUYEdlSca1J.png"></td>
+     <td><img src="https://i.loli.net/2019/10/18/MGRDZzT7ABSswyU.png"></td>
+   </tr>
+
+- Select the corresponding template and fill in the correct path
+
+<table>
+  <tr>
+     <td><img style="width:20%" src="https://i.loli.net/2019/10/18/vhp6BCEgjRwXa3O.png"></td>
+     <td><img style="width:20%" src="https://i.loli.net/2019/10/18/YbMNLlRIfxASFOT.png"></td>
+     <td><img style="width:20%" src="https://i.loli.net/2019/10/18/gk7YqFKSBsZAzQL.png"></td>
+     <td><img style="width:20%" src="https://i.loli.net/2019/10/18/ltpdW326brZ94UB.png"></td>
+  </tr>
+  <tr>
+     <td><b>search.html</b></td>
+     <td><b>Without restriction</b></td>
+     <td><b>archive.html</b></td>
+     <td><b>category.html</b></td>
+   </tr>
+</table>
+
+- Tencent Group: [861379856](https://jq.qq.com/?_wv=1027&k=5kACJ6v)
+
+### Multi-language Support
+
+- Need more language support, Welcome contribution. ([How to PR](#Contribute))
+- Add a translation
+  - [en](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/en.php)
+  - [Japan](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/ja.php)
+  - [zh_tw](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/zh_TW.php)
+  - [zh_CN](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/zh_CN.php)
+
+### Lazy load Image
+
+```markdown
+![Image Descript](image URL)
+
+//example
+![how-to-create-archive](https://website-href-/your/path/file.png)
+```
+
+### Short Code Support
+
+- video Short Code
+
+  ```markdown
+  - bilibili video
+    [bplayer](https://www.bilibili.com/video/av68718423)
+
+  - local video
+    [lplayer](/usr/uploads/2019/11/330578098.mp4)
+
+  - youtube video
+    [yplayer](https://www.youtube.com/watch?v=wv1bHjMGUBY)
+  ```
+
+  will render
+  ![video shot](https://i.loli.net/2019/11/04/VQgOJcIUi8t2MwN.png)
+
+- ...
+
+## Others Setting
+
+- Index Post Card
+  Home Article Overview The default maximum output is **Infinity** characters, you can manually add the truncation `<!-- more -->` control output.
+
+  ⬇ ⬇ ⬇ example (Article content)
+
+  ```markdown
+  ## hello world
+
+  <!--more-->
+
+  **I will not show it on the single page**
+  ~~Can you find me?~~
+  ```
+
+- Article thumbnail
+  weight of the thumbnail: Article field -> The first Upload Image of Article -> Image link in the article -> Random Image
+
+## Link
+
+Create a template before this, the content format is as follows
+
+```markdown
+- ![avatar descript](avatar href)[href descript](href)<hr> descript
+- [title](href) <hr> descript
+- [title](href)
+```
+
+## Header Menu Icon
 
 - Home <-> 主页
 - Comments <-> 留言
 - About <-> 关于
 - Link <-> 友链
-  暂定以上四个
+- Time
 
-## 图片懒加载
+## Comment Emoji
 
-- 不写宽高默认 `loading` 占位
+How to import custom Emoji ?
 
-```
-// 写法
-![宽::高::描述](图片地址)
-
-//例如
-![300::100::这是一只歪脖子鸟？？.jpg](http://localhost/typecho/usr/themes/typecho-theme-sagiri/img/author.jpg)
-```
-
-## 友情链接
-
-```markdown
-- ![头像描述](头像链接)[链接描述](链接)<hr> 一个有趣的站点
-- [链接描述](链接) <hr> 另一个有趣的站点
-- [链接描述](链接)
-```
-
-## 备份
-
-由于浏览量是新增字段故迁移时需要新建一个字段
-
-```sql
--- mysql
-ALTER TABLE `typecho_contents` ADD `views` INT(10) NULL DEFAULT '0' AFTER `parent`;
-```
+- [OwO](https://github.com/DIYgod/OwO)
+- [Emjio Util](./util/emjioUtil.min.js)
 
 ## Author
 
@@ -113,12 +179,33 @@ Authored and maintained by DIYgod with help from contributors ([list](https://gi
 
 > Blog [@OZOO](http://www.runtua.cn) · GitHub [@shiyi](https://github.com/shiyiya) · Twitter [@shiyi](https://twitter.com/)
 
-## 贡献
+## Donate
 
-pr 请在 **dev** 分支操作。
-欢迎各种形式的贡献，包括但不限于优化，添加功能，文档 & 代码的改进，问题和 bugs 的报告。
+Thank you for your support :-)
 
-## 许可证
+- [Donate via Paypal](https://paypal.me/)
+- [Donate via WeChat Pay](https://i.loli.net/2019/10/27/n5fAVZyRlN63EH4.png)
+- [Donate via Alipay]()
 
-Open sourced under the GPL V3.0 license.
-根据 GPL V3.0 许可证开源。
+## Contribute
+
+If you feel like to help us build a better Sagiri, you can
+
+- Write a plugin
+- [Submit a tutorial](https://github.com/shiyiya/typecho-theme-sagiri/tree/gh-pages)
+- [Report a bug | Feature request](https://github.com/shiyiya/typecho-theme-sagiri/issues/new/choose)
+- Add a translation
+  - [en](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/en.php)
+  - [Japan](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/ja.php)
+  - [zh_tw](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/zh_TW.php)
+  - [zh_CN](https://github.com/shiyiya/typecho-theme-sagiri/blob/master/libray/i18n/lang/zh_CN.php)
+
+### Contribute List
+
+- [dragonflylee](https://github.com/dragonflylee)
+
+## License
+
+The All Html,CSS,JavaScript,and PHP files are licensed under the GNU General Public License v3:
+
+http://www.gnu.org/licenses/gpl-3.0.html
