@@ -58,8 +58,9 @@ function themeConfig($form)
             'codeHighlight' => _i18n('代码高亮'),
             'commentEmoji' => _i18n('评论表情'),
             'lazyImg' => _i18n('文章内图片懒加载'),
+            'pjax' => _i18n('instantclick 支持'),
         ),
-        array('showThumb'),
+        array(''),
         _i18n('额外功能设置')
     );
     $form->addInput($feature->multiMode());
@@ -72,7 +73,7 @@ function themeConfig($form)
             'topComnentPost' => _i18n('热评文章'),
             'randomPost' => _i18n('随机文章'),
         ),
-        array('randomPost'),
+        array(''),
         _i18n('侧栏相关设置')
     );
     $form->addInput($siderbarOption->multiMode());
@@ -83,7 +84,7 @@ function themeConfig($form)
             'local' => _i18n('local'),
             'jsdelivr' => _i18n('jsdelivr'),
         ),
-       'local',
+        'local',
         _i18n('CDN setting'),
         _i18n('CDN setting')
     );

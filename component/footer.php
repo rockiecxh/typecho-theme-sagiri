@@ -1,10 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <footer id="footer" role="contentinfo">
-    <?php
-
-    ?>
-    <p><i class="iconfont icon-view"></i><?php echo _i18n('浏览量') . ' : ' . siteViewer(); ?></p>
+    <p><i class="iconfont icon-view"></i> <?php echo _i18n('浏览量') . ' : ' . siteViewer(); ?></p>
     <p id="live-time"></p>
     <p>
         &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
@@ -38,29 +35,22 @@
     <img src="<?php $this->options->backGroundImage() ?>" alt="This is just a placeholder img.">
 </div>
 
-<!-- <canvas id="live2d" class="live2d" width="140" height="250"></canvas> -->
+</div><!-- End root -->
+
+<?php $this->footer(); ?>
 
 <?php if (!empty($this->options->feature) && in_array('pjax', $this->options->feature)) : ?>
-    <script src="<?php CDNUrl('util/pjax.mini.js'); ?>"></script>
-
-    <script>
-        new miniPjax({
-            target: 'a',
-            body: '#root',
-            container: ['.content-wrap', '#sidebar']
-        })
+    <script src="<?php CDNUrl('js/lib/instantclick.min.js') ?>" data-no-instant></script>
+    <script data-no-instant>
+        InstantClick.init(50);
     </script>
 <?php endif; ?>
 
 <script src="<?php CDNUrl('js/sagiri.min.js'); ?>"></script>
 <script src="<?php CDNUrl('js/index.min.js'); ?>"></script>
 
-<script src="<?php CDNUrl('js/lib/instantclick.min.js') ?>" data-no-instant></script>
-<script data-no-instant>
-    InstantClick.init(50);
-</script>
-<!--  Lazy load images -->
 
+<!--  Lazy load images -->
 <?php if (!empty($this->options->feature) && in_array('lazyImg', $this->options->feature)) : ?>
     <script src="<?php CDNUrl('util/lazyload.min.js'); ?>"></script>
 <?php endif; ?>
@@ -81,6 +71,23 @@
 <!-- Code highlight -->
 <?php if (!empty($this->options->feature) && in_array('codeHighlight', $this->options->feature)) : ?>
     <script src="<?php CDNUrl('./js/lib/prism/prism.js'); ?>"></script>
+<?php endif; ?>
+
+<!-- OwO emoji -->
+<?php if (!empty($this->options->feature) && in_array('commentEmoji', $this->options->feature) && $this->allow('comment')) : ?>
+    <script src="<?php CDNUrl('js/lib/OwO/OwO.min.js'); ?>"></script>
+
+    <script>
+        new OwO({
+            logo: 'OωO',
+            container: document.getElementsByClassName('OwO')[0],
+            target: document.getElementsByClassName('OwO-textarea')[0],
+            api: '<?php CDNUrl('js/lib/OwO/OwO.json '); ?>',
+            position: 'down',
+            width: '100%',
+            maxHeight: '250px'
+        })
+    </script>
 <?php endif; ?>
 
 <script>
@@ -115,10 +122,6 @@
     //         });
     // }
 </script>
-
-</div><!-- End root -->
-
-<?php $this->footer(); ?>
 
 </body>
 

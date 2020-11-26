@@ -46,6 +46,11 @@
         <meta property="og:locale:alternate" content="zh_CN" />
     <?php endif; ?>
 
+    <!-- QQ Share -->
+    <meta itemprop="name" content="<?php $this->options->title() ?>" />
+    <meta itemprop="description" name="description" content=" <?php $this->description() ?>" />
+    <meta itemprop="image" content="<?php $this->options->authorImage ? $this->options->authorImage() : CDNUrl('assert/img/author.jpg'); ?>" />
+
     <!-- CSS Style -->
     <link async rel="stylesheet" href="<?php CDNUrl('css/mix.min.css'); ?>" />
     <link async rel="stylesheet" type="text/css" href="<?php CDNUrl('css/iconfont.min.css'); ?>" />
@@ -104,7 +109,7 @@
                         </li>
                     <?php endwhile; ?>
                     <li class="menu-item search">
-                        <a href="<?php $this->options->rewrite ?  $this->options->siteUrl('search.html') : $this->options->siteUrl('index.php/search.html') ?>" alt="<?php i18n(搜索) ?>" aria-label="Search"><i class="iconfont icon-search"></i></a>
+                        <a href="<?php $this->options->rewrite ?  $this->options->siteUrl('search.html') : $this->options->siteUrl('index.php/search.html') ?>" alt="<?php i18n('搜索') ?>" aria-label="<?php i18n('搜索') ?>"><i class="iconfont icon-search"></i></a>
                     </li>
                 </ul>
             </nav>
