@@ -19,7 +19,7 @@ function replaceTag($content)
 
 function imgToLay($content, $themeUrl)
 {
-  $REG = '<img class="lazy-loader" lazy-src="$1" src="' . $themeUrl . '/assert/img/loader.gif' . '" alt="$2" title="$3" />';
+  $REG = '<img class="lazy-loader" lazy-src="$1" src="' . $themeUrl . '/assets/img/loader.gif' . '" alt="$2" title="$3" />';
   $content = preg_replace(
     "/<[img|IMG].*?src=[\'|\"](?<src>.*?)[\'|\"].*?alt=[\'|\"](?<alt>.*?)[\'|\"].*?title=[\'|\"](?<title>.*?)[\'|\"][\/|img|IMG]?>/sm",
     $REG,
@@ -77,7 +77,7 @@ function videoTagToHtml($content)
 }
 
 
-function login2view($hasLogin = true, $content)
+function login2view($content, $hasLogin = false)
 {
   if ($hasLogin) {
     $content = preg_replace("/\[lhide\](.*?)\[\/lhide\]/sm", '$1', $content);
